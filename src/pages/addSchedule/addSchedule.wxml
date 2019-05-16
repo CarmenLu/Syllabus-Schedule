@@ -1,2 +1,71 @@
 <!--src/pages/addSchedule/addSchedule.wxml-->
 <nav></nav>
+<view class="TabSwiper">
+    <view class="swiper-list {{currentTab==0?'on':' '}}" style="margin-right:200rpx;" data-current='0' bindtap="switchNav">
+        日程
+    </view>
+    <view class="swiper-list {{currentTab==1?'on':' '}}" style="margin-right:186rpx;" data-current='1' bindtap="switchNav">
+        课程
+    </view>
+</view>
+
+<swiper current="{{currentTab}}" class="currentBox" style="height:{{sysHeight*2-146-navH*2}}rpx;" bindchange="bindChange">
+    <!--日程-->
+    <swiper-item>
+        <scroll-view scroll-y="{{false}}" style="height: 100%;">
+            <view class="interval">
+            </view>
+            <view class="schedule">
+                | 英语作业ddl…
+            </view>
+            <view class="interval"></view>
+            <view class="whiteInterval">
+                <view class="detail">
+                    <view class="ctitle">开始
+                    </view>
+                    <view class="right">
+                        <view class="content">
+                            04/09周三 19:00
+                        </view>
+                        <view class="iconfont .icon-xiayibu"></view>
+                    </view></view>
+
+            </view>
+            <view class="intervalLine"></view>
+
+            <view class="whiteInterval">
+                <view class="detail">
+                    <view class="ctitle">结束
+                    </view>
+                    <view class="right">
+                        <view class="content">
+                            04/09周三 20:00
+                        </view>
+                        <view class="iconfont .icon-xiayibu"></view>
+                    </view></view>
+
+            </view>
+            <view class="intervalLine"></view>
+            <view class="whiteInterval" style="height:200rpx; ">
+                <view class="detail">
+                    <view class="ctitle">提示
+                    </view>
+                    <view class="right">
+                        <view class="content">
+                            5分钟后
+                        </view>
+                        <view class="iconfont .icon-xiayibu"></view>
+                    </view></view>
+
+            </view>
+            <view class="rest">
+                <view class="complete" bindtap="summit">
+                    <text>完成</text>
+                </view>
+            </view>
+        </scroll-view>
+    </swiper-item>
+    <!--课表-->
+    <swiper-item>
+        all</swiper-item>
+</swiper>

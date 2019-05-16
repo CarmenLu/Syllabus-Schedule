@@ -19,6 +19,32 @@ Page({
             sysHeight: App.globalData.Height
         })
     },
+    switchNav: function (e) {
+
+        let that = this
+
+        if (that.data.currentTab === e.target.dataset.current) {
+
+            return false
+
+        } else {
+
+            that.setData({
+
+                currentTab: e.target.dataset.current
+
+            })
+
+        }
+        console.log(this.data.currentTab)
+
+    },
+    bindChange: function (e) {
+        let that = this
+        that.setData({
+            currentTab: e.detail.current
+        })
+    },
 
     /**
      * 生命周期函数--监听页面初次渲染完成

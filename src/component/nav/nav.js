@@ -43,31 +43,5 @@ Component({
                 delta: 1
             })
         },
-        switchNav: function (e) {
-
-            let that = this
-
-            if (that.data.currentTab === e.target.dataset.current) {
-
-                return false
-
-            } else {
-
-                that.setData({
-
-                    currentTab: e.target.dataset.current
-
-                })
-
-            }
-            console.log(this.data.currentTab)
-
-        },
-        bindChange: function (e) {
-            let that = this
-            that.setData({
-                currentTab: e.detail.current
-            })
-        }
     }
 })
