@@ -2168,13 +2168,13 @@ function htmlTreeAsString(elem) {
   var MAX_TRAVERSE_HEIGHT = 5,
     MAX_OUTPUT_LEN = 80,
     out = [],
-    height = 0,
+    sysHeight = 0,
     len = 0,
     separator = ' > ',
     sepLength = separator.length,
     nextStr;
 
-  while (elem && height++ < MAX_TRAVERSE_HEIGHT) {
+  while (elem && sysHeight++ < MAX_TRAVERSE_HEIGHT) {
     nextStr = htmlElementAsString(elem);
     // bail out if
     // - nextStr is the 'html' element
@@ -2182,7 +2182,7 @@ function htmlTreeAsString(elem) {
     //   (ignore this limit if we are on the first iteration)
     if (
       nextStr === 'html' ||
-      (height > 1 && len + out.length * sepLength + nextStr.length >= MAX_OUTPUT_LEN)
+      (sysHeight > 1 && len + out.length * sepLength + nextStr.length >= MAX_OUTPUT_LEN)
     ) {
       break;
     }

@@ -14,12 +14,14 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.5.1",
-	"appid": "wx560f8ff50bb29424",
+	"appid": "wx7a1cb1727668fcc7",
 	"projectname": "mini-pro-framework",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
